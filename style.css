@@ -1,0 +1,46 @@
+:root{
+    --primary:#E5F1ED;
+    --titles:#56a696;
+    --grey:#3e4852;
+}
+
+body{
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+.bg-primary{
+    background-color: var(--primary)!important;
+}   
+
+#sidebar {
+    min-height: 100vh; 
+}
+
+#sidebar .logo {
+    padding: .875rem 1.25rem; 
+    color: var(--titles);
+}
+
+#sidebar .menu {
+    width: 18rem; 
+    color: var(--grey);
+}
+
+.icon {
+    color: #DEBC93;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-size: 12px;
+}
+
+.searchNavbar {
+    right: 18px;
+}
