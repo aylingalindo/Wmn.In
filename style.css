@@ -109,8 +109,8 @@ h2 {
 }
 
 .contentItem{
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-top: 32px;
     margin-bottom: 32px;
 }
@@ -134,5 +134,28 @@ h2 {
 .sortBy:hover{
     background-color: var(--primary);
     border: 0;
+    color: var(--hover);
+}
+
+.card-header {
+    border-bottom: var(--light);
+    background-color: var(--light);
+}
+
+.card-body{
+    background-color: var(--light);
+}
+
+.card-header {
+    border-bottom: var(--light);
+    background-color: var(--light);
+}
+
+.card-footer {
+    border-top: var(--light);
+    background-color: var(--light);
+}
+
+.card-footer:hover{
     color: var(--hover);
 }
