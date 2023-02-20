@@ -13,6 +13,8 @@ body{
 }
 
 
+/* ------------------------------- DASHBOARD ------------------------------------------------ */
+
 #sidebar {
     min-height: 100vh; 
     background-color: var(--light)!important;
@@ -27,6 +29,8 @@ body{
 #sidebar .menu {
     width: 18rem; 
     color: var(--text);
+    min-height: 100vh; 
+    font-size: larger;
 }
 
 .icon {
@@ -37,8 +41,10 @@ a:hover {
     text-decoration: none;
 }
 
+
 p {
-    font-size: 12px;
+    font-size: 12px!important;
+    margin:0; 
 }
 
 .searchNavbar {
@@ -69,6 +75,15 @@ h2 {
 
 .sortingItem:hover {
     color: var(--hover);
+    border-bottom: var(--hover) solid 4px;
+}
+
+.misLinks {
+    margin-bottom: 20px;
+}
+
+.misLinks:hover {
+    color:var(--hover);
 }
 
 /* ------------------------------------ */
@@ -98,10 +113,9 @@ h2 {
 }
 
 .btn-primary:hover {
-    background-color: var(--hover);
-    color: var(--text);
+    background-color: var(--light);
     border-color: var(--hover);
-    
+    color: var(--hover);
 }
 
 .btnNewpost{
@@ -159,3 +173,56 @@ h2 {
 .card-footer:hover{
     color: var(--hover);
 }
+
+
+/* ---------------------------------- INDEX PAGE ------------------------------------------------- */
+
+#indexPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary);
+}
+
+#indexPage .d-flex {
+    height: 100vh;
+}
+
+#indexPage .container {
+    height: fit-content;
+    margin: 150px;
+}
+
+footer {
+    color: var(--text);
+    background-color: var(--primary);
+}
+
+.signUpBtn{
+    background-color:var(--titles);
+    border-color: var(--titles);
+}
+
+.signUpBtn:hover{
+    background-color:var(--titles);
+    border-color: var(--hover);
+    color: var(--hover);
+}
+
+.signInBtn{
+    background-color:var(--primary);
+    border-color: var(--primary);
+    width: 100%;
+}
+
+.signInBtn:hover{
+    background-color:var(--primary);
+    border-color: var(--hover);
+    color: var(--hover);
+}
+
+/*------------------------------------- USER PROFILE -----------------------------------------------*/
+
+.portadaPerfil{
+    max-width:800px;
+}
+
