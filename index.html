@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto:wght@100&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css"/>
+    <script defer src="funcionalidad.js"></script>
     <title>wm.In</title>
 </head>
 <body>
     <!-- CONTENT -->
   <div id="indexPage">
+
+    <div id="overlay"></div>
 
     <footer>
       <div class="row text-center">
@@ -26,6 +29,157 @@
     </footer>
 
     <div class="d-flex align-items-center">
+
+      <!-- POP UP REGISTER -->
+      <div id="popupRegister" class="card">
+
+        <!-- titulo y boton que se van a quedar siempre -->
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 ms-5 me-auto mt-3">
+              <h4>Sign Up</h4>
+            </div>
+            <div class="col pt-3">
+              <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-close"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- contenido que va a cambiar -->
+        <div class="card-body d-flex">
+          <div id="carouselExample" class="carousel slide flex-fill">
+            <div class="carousel-inner mx-5">
+
+              <!-- form de la pagina 1 :D-->
+              <div class="carousel-item active">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-12">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="validationCustom02" class="form-label">First last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="validationCustomUsername" class="form-label">Second last name</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="validationCustomUsername" value="Otto" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please choose a second last name.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="validationCustomUsername" value="person@email.com" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please write a valid email.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="validationCustom04" class="form-label">Date of birth</label>
+                  </div>
+                  <div class="col-3">
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">23</option>
+                      <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid day.
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">02</option>
+                      <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid month.
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <select class="form-select" id="validationCustom04" required>
+                      <option selected disabled value="">2023</option>
+                      <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid year.
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- form de la pagina 2 :D -->
+              <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-12 pfpSignupLabel mb-3">
+                      <label class="form-label">Choose a profile picture</label>
+                    </div>
+                    <div class="col-12 ms-8 me-0 ps-5 mb-3">
+                        <img src="assets/defaultpfp.png" class="img-fluid rounded-circle pfpPerfil ms-5 me-0">
+                    </div>
+                    <div class="col-12 mb-3">
+                      <input type="file" class="form-control" aria-label="file example" required>
+                      <div class="invalid-feedback">Example invalid form file feedback</div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- form de la pagina 3 :DD -->
+              <div class="carousel-item">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-12">
+                    <label for="validationCustom01" class="form-label">Choose a username</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="mark123" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Choose a password</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Invalid passowrd.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary signInBtn">Sign Up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <i class="icon ion-md-arrow"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <i class="icon ion-md-arrow"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- WELCOME -->
       <div class="container">
         <h1>wm.In</h1>
@@ -46,8 +200,9 @@
         </div>
 
         <!-- boton registro-->
-        <button type="button" class="btn btn-primary my-3 signUpBtn">New? Sign up</button>
+        <button data-modal-target="#popupRegister" type="button" class="btn btn-primary my-3 signUpBtn">New? Sign up</button>
       </div>
+        
     </div>
   </div>
 

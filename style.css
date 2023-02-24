@@ -35,6 +35,7 @@ body{
 
 .icon {
     align-items: center;
+    color: var(--text)
 }
 
 a:hover {
@@ -43,7 +44,7 @@ a:hover {
 
 
 p {
-    font-size: 12px!important;
+    font-size: 14px!important;
     margin:0; 
 }
 
@@ -90,6 +91,7 @@ h2 {
 
 #content {
     overflow-y: auto;
+    overflow-x: hidden;
     height:100vh;
     width: 100%;
     padding-bottom: 5rem;
@@ -132,6 +134,7 @@ h2 {
 .subTitle{
     font-size:large;
     padding-bottom: 1.2rem;
+    font-weight: bold;
 }
 
 .border-bottom{ 
@@ -151,17 +154,18 @@ h2 {
     color: var(--hover);
 }
 
+.card{
+    border-radius: 30%;
+    border: 2px;
+}
+
 .card-header {
     border-bottom: var(--light);
     background-color: var(--light);
+    padding-bottom: 0px;
 }
 
 .card-body{
-    background-color: var(--light);
-}
-
-.card-header {
-    border-bottom: var(--light);
     background-color: var(--light);
 }
 
@@ -174,7 +178,31 @@ h2 {
     color: var(--hover);
 }
 
+#popupNewpost {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
+    transition: 200ms ease-in-out;
+    z-index: 10; /* su capa, para que se muestre sobre lo demás*/
+    width:50%;
+    height:60%;
+}
 
+#popupNewpost.active {
+    transform: translate(-50%, -50%)scale(1); 
+}
+
+#popupNewpost .closeBtn{
+    background: none;
+    border: none;
+}
+
+#popupNewpost button :hover {
+    background: none;
+    border: none;
+    color: var(--hover);
+}
 /* ---------------------------------- INDEX PAGE ------------------------------------------------- */
 
 #indexPage{
@@ -200,6 +228,7 @@ footer {
 .signUpBtn{
     background-color:var(--titles);
     border-color: var(--titles);
+    color: var(--primary);
 }
 
 .signUpBtn:hover{
@@ -220,9 +249,89 @@ footer {
     color: var(--hover);
 }
 
+#popupRegister {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
+    transition: 200ms ease-in-out;
+    z-index: 10; /* su capa, para que se muestre sobre lo demás*/
+    width:50%;
+    height:60%;
+}
+
+#popupRegister.active {
+    transform: translate(-50%, -50%)scale(1); 
+}
+
+#overlay {
+    position: fixed; 
+    opacity: 0;  /* para que no se vea cuando no esta activo el pop up*/
+    transition: 200ms ease-in-out;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);  
+    z-index: 8;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#popupRegister .closeBtn{
+    background: none;
+    border: none;
+}
+
+#popupRegister button :hover {
+    background: none;
+    border: none;
+    color: var(--hover);
+}
+
+.carousel-inner {
+    max-width: fit-content;
+}
+
+.pfpSignupLabel {
+    text-align: center;
+}
 /*------------------------------------- USER PROFILE -----------------------------------------------*/
 
 .portadaPerfil{
-    max-width:800px;
+    overflow: hidden;
+    height: 300px;
+    max-width: fit-content;
 }
 
+.headerPerfil {
+    max-width: fit-content;
+    padding: 0px;
+}
+
+.pfpPerfil{
+    max-width: 120px;
+    border: 2px;
+    border-color: var(--primary);
+    position:relative;
+}
+
+.pfpDiv {
+    overflow: visible;
+    height: 50px;
+}
+
+h6{
+    font-weight: bold;
+}
+
+.pfpFriend{
+    max-width: 50px;
+}
+
+.communitySorting{
+    border-bottom: var(--text)!important;
+}
