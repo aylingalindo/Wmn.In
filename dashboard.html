@@ -94,19 +94,34 @@
 
         <!-- titulo y boton que se van a quedar siempre -->
         <div class="card-header">
-          <div class="row">
-            <div class="col-10 ms-5 me-auto mt-3">
-              <h4>Sign Up</h4>
+          <div class="row pt-3 mx-3">
+            <div class="col-11 me-auto">
+              <img src="assets/fotoPerfil.jpeg" class="img-fluid rounded-circle pfpNewpost">
+              Aylin Galindo
             </div>
-            <div class="col pt-3">
+            <div class="col">
               <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-close"></i></button>
             </div>
           </div>
         </div>
 
         <!-- contenido que va a cambiar -->
-        <div class="card-body d-flex">
-          <p>contenido</p>
+        <div class="card-body">
+          <div class="row mx-3 mb-4">
+            <textarea class="form-control" placeholder="What do you want to share?" rows="4"></textarea>
+          </div>
+          <div class="row mx-3 my-4 newpostContainer">
+              <button data-close-button type="button" class="closeBtn col"><i class="icon ion-md-photos"></i></button>
+              <button data-close-button type="button" class="closeBtn col"><i class="icon ion-md-play"></i></button>
+              <button data-close-button type="button" class="closeBtn col"><i class="icon ion-md-attach"></i></button>
+              <button data-close-button type="button" class="closeBtn col"><i class="icon ion-md-pin"></i></button>
+          </div>
+          <div class="row mx-3 my-4 newpostContainer">
+            <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-pricetags"></i></button>
+          </div>
+          <div class="row mx-3 my-4">
+              <button type="submit" class="btn btn-primary signInBtn">Post</button>
+          </div>
         </div>
 
       </div>
@@ -131,7 +146,7 @@
         <!-- sorting bars-->
         <div class="container text-center border-bottom">
           <div class="row">
-            <div class="col sortingItem">
+            <div class="col sortingItem active">
               <a href="#" class="nav-link subTitle">Comunity</a> 
             </div>
             <div class="col sortingItem">

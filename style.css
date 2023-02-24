@@ -74,6 +74,11 @@ h2 {
     margin-right: 64px;
 }
 
+.col.sortingItem.active {
+    color: var(--hover);
+    border-bottom: var(--hover) solid 4px;
+}
+
 .sortingItem:hover {
     color: var(--hover);
     border-bottom: var(--hover) solid 4px;
@@ -185,8 +190,8 @@ h2 {
     transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
     transition: 200ms ease-in-out;
     z-index: 10; /* su capa, para que se muestre sobre lo demás*/
-    width:50%;
-    height:60%;
+    width:45%;
+    height:50%;
 }
 
 #popupNewpost.active {
@@ -203,6 +208,17 @@ h2 {
     border: none;
     color: var(--hover);
 }
+
+.newpostContainer {
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+#popupNewpost .form-control {
+    border: 0;
+}
+
+
 /* ---------------------------------- INDEX PAGE ------------------------------------------------- */
 
 #indexPage{
