@@ -16,6 +16,7 @@
 </head>
 <body>
   <div class="d-flex"> 
+    <div id="overlay"></div>
     <!-- NAV BAR-->
     <div id="sidebar" class="bg-primary">
 
@@ -27,6 +28,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn searchNavbar position-absolute" type="submit"><i class="icon ion-md-search"></i></button>
         </form>
+        <button data-modal-target="#popupAdvancedSearch" id="advancedSearchBtn"type="button" class="btn btn-primary ms-4">Advanced Search</button>
 
         <!--elementos para seleccionar-->
         <div class="menu d-flex flex-column justify-content-evenly mb-5 pb-5">
@@ -34,7 +36,7 @@
           <!-- Info User-->
           <div class="nav-item pb-3 userInfo">
             <img src="assets/fotoPerfil.jpeg" class="img-fluid rounded-circle pfp mb-2">
-            <a href="#" class="nav-link mb-2">Aylin Galindo</a>    <!-- dblock para que cada uno este en una linea y p-3 para separalos-->
+            <a href="user-profile.html" class="nav-link mb-2">Aylin Galindo</a>    <!-- dblock para que cada uno este en una linea y p-3 para separalos-->
             <p class="mb-2">Game Dev Student</p>
           </div>
 
@@ -61,21 +63,15 @@
                 <i class="icon ion-md-home lead "></i>
               </div>
               <div class="col-8">
-                <a href="#" class="nav-link">Home</a>
+                <a href="dashboard.html" class="nav-link">Home</a>
               </div>
             </div>
-            <div class="row misLinks pb-5">
-              <div class="col-2 pe-0 ps-3">
-                <i class="icon ion-md-more lead"></i>
+            <div class="row misLinks">
+              <div class="col-2 pe-1">
+                <i class="icon ion-md-exit"></i>
               </div>
               <div class="col-8">
-                <a class="nav-link dropdown dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Log out</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a href="index.html" class="nav-link">Log out</a>
               </div>
             </div>
           </div>
@@ -85,6 +81,62 @@
 
     <!-- CONTENT -->
     <div id="content">
+
+      <!-- POP UP ADVANCED SEARCH-->
+      <div id="popupAdvancedSearch" class="card">
+
+        <!-- titulo y boton que se van a quedar siempre -->
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 ms-5 me-auto mt-3">
+              <h4>Advanced Search</h4>
+            </div>
+            <div class="col pt-3">
+              <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-close"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- contenido que va a cambiar -->
+        <div class="card-body">
+          <div class="row mx-3">
+            <label class="form-label">Date range</label>
+          </div>
+          <div class="row mx-3 mb-4">
+            <div class="col ms-5">
+              <input type="date" class="form-control" name="fechaInicio" value=""/>
+            </div>
+            <div class="col fs-3 ps-5 pe-0">
+              <label class="form-label">---</label>
+            </div>
+            <div class="col me-5">
+            <input type="date" class="form-control" name="fechaFin" value=""/>
+            </div>
+          </div>
+          <div class="row mx-3">
+            <label class="form-label">Category</label>
+          </div>
+          <div class="row mx-3 mb-4 newpostContainer">
+            <div class="col">
+              <i class="icon ion-md-pricetags ms-2 mt-2"></i>
+            </div>
+            <div class="col-11 categories">
+              <button type="button" class="cat">#Science</button>
+              <button type="button" class="cat">#Tech</button>
+              <button type="button" class="cat">#Art</button>
+              <button type="button" class="cat">#Design</button>
+              <button type="button" class="cat">#Business</button>
+              <button type="button" class="cat">#Psychology</button>
+              <button type="button" class="cat">#Medicine</button>
+              <button type="button" class="cat">#Human Arts</button>
+            </div>
+          </div>
+          <div class="row mx-3 my-4">
+              <button type="submit" class="btn btn-primary signInBtn">Search</button>
+          </div>
+        </div>
+
+      </div>
 
       <!-- PERFIL -->
       <section class="border-bottom">
@@ -104,7 +156,7 @@
                 <h6>128 community friends</h6>
               </div>
             </div>
-            <button type="button" class="btn btn-primary signUpBtn m-4 ps-4 pe-4"><i class="icon ion-md-add pe-2"></i></i>Add</button>
+            <button type="button" class="btn btn-primary signUpBtn m-4 ps-4 pe-4 invisible"><i class="icon ion-md-add pe-2"></i></i>Add</button>
             <button type="button" class="btn btn-primary signUpBtn m-4 ps-4 pe-4"><i class="icon ion-md-create pe-2"></i>Edit</button>
           </div>
         </div>

@@ -23,7 +23,9 @@ body{
 #sidebar .logo {
     padding: .875rem 1.25rem; 
     color: var(--titles);
-    font-weight: bolder!important;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 #sidebar .menu {
@@ -35,7 +37,12 @@ body{
 
 .icon {
     align-items: center;
-    color: var(--text)
+    color: var(--text);
+}
+
+.icon:hover {
+    align-items: center;
+    color: var(--hover);
 }
 
 a:hover {
@@ -218,6 +225,50 @@ h2 {
     border: 0;
 }
 
+.cat {
+    border: 0; 
+    background-color: var(--hover);
+    opacity: 50%;
+    margin: 2px; 
+    display: inline-block;
+}
+
+.categories {
+    overflow: auto;
+    height: 35px;
+    white-space: nowrap;
+}
+
+#advancedSearchBtn {
+    background-color:var(--titles);
+    border-color: var(--titles);
+    color: var(--primary);
+    font-size: small;
+}
+
+#popupAdvancedSearch {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
+    transition: 200ms ease-in-out;
+    z-index: 10; /* su capa, para que se muestre sobre lo demás*/
+    width:45%;
+    height:50%;
+}
+#popupAdvancedSearch.active {
+    transform: translate(-50%, -50%)scale(1); 
+}
+#popupAdvancedSearch .closeBtn{
+    background: none;
+    border: none;
+}
+
+#popupAdvancedSearch button :hover {
+    background: none;
+    border: none;
+    color: var(--hover);
+}
 
 /* ---------------------------------- INDEX PAGE ------------------------------------------------- */
 
@@ -233,7 +284,7 @@ h2 {
 
 #indexPage .container {
     height: fit-content;
-    margin: 150px;
+    margin: 120px;
 }
 
 footer {
@@ -312,8 +363,24 @@ footer {
     max-width: fit-content;
 }
 
-.pfpSignupLabel {
-    text-align: center;
+.carousel-indicators [data-bs-target] {
+    background-color: var(--titles);
+}
+
+#carouselExample .img-fluid {
+    display: inline;
+    left: 35%;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 135px;
+    color: var(--titles);
+    font-family: serif;
+}
+
+#indexPage h5{
+    font-size: 30px;
 }
 /*------------------------------------- USER PROFILE -----------------------------------------------*/
 
@@ -329,10 +396,11 @@ footer {
 }
 
 .pfpPerfil{
-    max-width: 120px;
-    border: 2px;
-    border-color: var(--primary);
+    max-width: 130px;
+    border: 6px solid var(--primary);
     position:relative;
+    z-index: 6;
+    top:-70%;
 }
 
 .pfpDiv {
