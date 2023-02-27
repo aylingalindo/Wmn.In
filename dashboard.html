@@ -28,7 +28,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn searchNavbar position-absolute" type="submit"><i class="icon ion-md-search"></i></button>
         </form>
-        <button data-modal-target="#popupAdvancedSearch" id="advancedSearchBtn"type="button" class="btn btn-primary ms-4">Advanced Search</button>
+        <button data-modal-target="#popupAdvancedSearch" type="button" class="btn btn-primary ms-4 advancedSearchBtn">Advanced Search</button>
 
         <!--elementos para seleccionar-->
         <div class="menu d-flex flex-column justify-content-evenly mb-5 pb-5">
@@ -127,7 +127,7 @@
             </div>
           </div>
           <div class="row mx-3 my-4">
-              <button type="submit" class="btn btn-primary signInBtn">Post</button>
+              <button type="submit" class="btn btn-primary signUpBtn">Post</button>
           </div>
         </div>
 
@@ -136,7 +136,6 @@
       <!-- POP UP ADVANCED SEARCH-->
       <div id="popupAdvancedSearch" class="card">
 
-        <!-- titulo y boton que se van a quedar siempre -->
         <div class="card-header">
           <div class="row">
             <div class="col-10 ms-5 me-auto mt-3">
@@ -148,7 +147,6 @@
           </div>
         </div>
 
-        <!-- contenido que va a cambiar -->
         <div class="card-body">
           <div class="row mx-3">
             <label class="form-label">Date range</label>
@@ -172,18 +170,18 @@
               <i class="icon ion-md-pricetags ms-2 mt-2"></i>
             </div>
             <div class="col-11 categories">
-              <button type="button" class="cat">#Science</button>
-              <button type="button" class="cat">#Tech</button>
-              <button type="button" class="cat">#Art</button>
-              <button type="button" class="cat">#Design</button>
-              <button type="button" class="cat">#Business</button>
-              <button type="button" class="cat">#Psychology</button>
-              <button type="button" class="cat">#Medicine</button>
-              <button type="button" class="cat">#Human Arts</button>
+              <button type="button" class="cat btn">#Science</button>
+              <button type="button" class="cat btn">#Tech</button>
+              <button type="button" class="cat btn">#Art</button>
+              <button type="button" class="cat btn">#Design</button>
+              <button type="button" class="cat btn">#Business</button>
+              <button type="button" class="cat btn">#Psychology</button>
+              <button type="button" class="cat btn">#Medicine</button>
+              <button type="button" class="cat btn">#Human Arts</button>
             </div>
           </div>
           <div class="row mx-3 my-4">
-              <button type="submit" class="btn btn-primary signInBtn">Search</button>
+              <button type="submit" class="btn btn-primary signUpBtn">Search</button>
           </div>
         </div>
 
@@ -219,14 +217,14 @@
         </div>
 
         <!-- sort by options-->
-        <div class="dropdown d-flex flex-row-reverse">
+        <!--<div class="dropdown d-flex flex-row-reverse">
           <button class="btn btn-secondary dropdown-toggle sortBy" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sort by</button>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Latest</a></li>
             <li><a class="dropdown-item" href="#">Popular</a></li>
             <li><a class="dropdown-item" href="#">Category</a></li>
           </ul>
-        </div>
+        </div>-->
 
         <!-- post -->
         <div class="card contentItem">

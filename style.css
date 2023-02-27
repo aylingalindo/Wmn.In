@@ -4,6 +4,8 @@
     --light: #fff;
     --text:#3e4852;
     --hover: #DEBC93;
+    --bs-link-color:#DEBC93;
+    --bs-link-hover-color:#DEBC93;
 }
 
 body{
@@ -14,6 +16,10 @@ body{
 
 
 /* ------------------------------- DASHBOARD ------------------------------------------------ */
+
+.nav-link:hover {
+    color:var(--hover);
+}
 
 #sidebar {
     min-height: 100vh; 
@@ -30,23 +36,21 @@ body{
 
 #sidebar .menu {
     width: 18rem; 
-    color: var(--text);
+    color:var(--text);
     min-height: 100vh; 
     font-size: larger;
 }
 
 .icon {
     align-items: center;
-    color: var(--text);
 }
 
 .icon:hover {
     align-items: center;
-    color: var(--hover);
 }
 
 a:hover {
-    text-decoration: none;
+    color:var(--hover);
 }
 
 
@@ -123,8 +127,10 @@ h2 {
     background-color: var(--light);
     border-color: var(--light);
     color: var(--text);
-
+    --bs-btn-active-bg:var(--hover);
+    --bs-btn-active-border-color: var(--hover);
 }
+
 
 .btn-primary:hover {
     background-color: var(--light);
@@ -226,7 +232,7 @@ h2 {
 }
 
 .cat {
-    border: 0; 
+    border-radius: 0; 
     background-color: var(--hover);
     opacity: 50%;
     margin: 2px; 
@@ -234,16 +240,25 @@ h2 {
 }
 
 .categories {
-    overflow: auto;
-    height: 35px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 45px;
     white-space: nowrap;
 }
 
-#advancedSearchBtn {
-    background-color:var(--titles);
-    border-color: var(--titles);
-    color: var(--primary);
+.cat:hover {
+    background-color: var(--titles);
+}
+
+
+.advancedSearchBtn {
     font-size: small;
+    background-color: var(--titles);
+    border-color: var(--titles);
+}
+
+.advancedSearchBtn:hover {
+    background-color: var(--titles);
 }
 
 #popupAdvancedSearch {
@@ -259,9 +274,14 @@ h2 {
 #popupAdvancedSearch.active {
     transform: translate(-50%, -50%)scale(1); 
 }
-#popupAdvancedSearch .closeBtn{
+
+.closeBtn{
     background: none;
     border: none;
+}
+
+.closeBtn:hover{
+    color:var(--hover);
 }
 
 #popupAdvancedSearch button :hover {
@@ -382,6 +402,11 @@ h1{
 #indexPage h5{
     font-size: 30px;
 }
+
+.pfpRegistro {
+    max-width: 130px;
+}
+
 /*------------------------------------- USER PROFILE -----------------------------------------------*/
 
 .portadaPerfil{
