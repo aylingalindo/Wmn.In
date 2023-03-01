@@ -17,6 +17,7 @@
 <body>
   <div class="d-flex"> 
     <div id="overlay"></div>
+
     <!-- NAV BAR-->
     <div id="sidebar" class="bg-primary">
 
@@ -138,6 +139,160 @@
 
       </div>
 
+      <!-- POP UP EDITAR INFO PERFIL -->
+      <div id="popupEditInfo" class="card">
+
+        <!-- titulo y boton que se van a quedar siempre -->
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 ms-3 me-auto mt-3">
+              <h4>Edit Info</h4>
+            </div>
+            <div class="col pt-3">
+              <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-close"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- contenido que va a cambiar -->
+        <div class="card-body d-flex">
+          <div id="carouselExample" class="carousel slide flex-fill">
+            <div class="carousel-inner mx-3 mb-5">
+
+              <!-- form de la pagina 1 :D-->
+              <div class="carousel-item active">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-12">
+                    <label for="validationName" class="form-label">First name(s)</label>
+                    <input type="text" class="form-control" id="validationName" value="Aylin" required>
+                    <div class="invalid-feedback">
+                      Please fill with letters. 
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="validationFirstLN" class="form-label">First last name</label>
+                    <input type="text" class="form-control" id="validationFirstLN" value="Galindo" required>
+                    <div class="invalid-feedback">
+                      Please fill with letters. 
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="validationSecondLN" class="form-label">Second last name</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="validationSecondLN" value="Acosta" required>
+                      <div class="invalid-feedback">
+                        Please fill with letters.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- form de la pagina 2 :D -->
+              <div class="carousel-item">
+                  <div class="row g-3 align-content-start justify-content-center flex-fill ms-3">
+                    <div class="col-12">
+                      <label class="form-label">Choose a profile picture</label>
+                    </div>
+                    <div class="col-12 pfpRegistro">
+                        <img src="assets/defaultpfp.png" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-12 mb-3">
+                      <input type="file" class="form-control" aria-label="file example" required>
+                      <div class="invalid-feedback">Example invalid form file feedback</div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Choose a background image</label>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <input type="file" class="form-control" aria-label="file example" required>
+                      <div class="invalid-feedback">Example invalid form file feedback</div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- form de la pagina 3 :DD -->
+              <div class="carousel-item">
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-12">
+                    <label for="validationCustom01" class="form-label">Change username</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="@aylingalindo" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Change password</label>
+                    <div class="input-group has-validation">
+                      <input type="password" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="password" required>
+                      <div class="invalid-feedback">
+                        Invalid passowrd.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary signInBtn">Confirm</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="carousel-indicators mb-0">
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POP UP EDITAR ABOUT -->
+      <div id="popupEditAbout" class="card">
+        <!-- titulo y boton que se van a quedar siempre -->
+        <div class="card-header">
+          <div class="row">
+            <div class="col-10 ms-3 mt-3">
+              <h4>@aylingalindo</h4>
+            </div>
+            <div class="col ms-2 pt-3">
+              <button data-close-button type="button" class="closeBtn"><i class="icon ion-md-close"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- form para editar información-->
+        <div class="card-body d-flex">
+          <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Ocupation</label>
+                <input type="text" class="form-control" id="Ocupation" value="Game Developer">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" id="Ocupation" value="Monterrey, MX">
+              </div>
+              <div class="col-12">
+                <label for="validationEmail" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="validationEmail" value="aylingalindo@email.com" required>
+                  <div class="invalid-feedback">
+                    Please write a valid email.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="validationDate" class="form-label">Date of birth</label>
+                <div class="input-group has-validation">
+                  <input type="date" class="form-control" name="fecha" id="validationDate" value="" required>
+                  <div class="invalid-feedback">
+                  Please select a valid date.
+                </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary signInBtn">Sign Up</button>
+              </div>
+          </form>
+        </div>
+      </div>
+
       <!-- PERFIL -->
       <section class="border-bottom">
         <div class="container contentItem headerPerfil">
@@ -156,7 +311,7 @@
                 <h6>128 community friends</h6>
               </div>
             </div>
-            <button type="button" class="btn btn-primary signUpBtn m-4">
+            <button data-modal-target="#popupEditInfo" type="button" class="btn btn-primary signUpBtn m-4">
               <i class="icon ion-md-create"></i>
               <i class="icon ion-md-add invisible"></i>
             </button>
@@ -175,7 +330,7 @@
                 <h4>About</h4>
               </div>
               <div class="col ps-5 pe-0">
-                <button data-close-button type="button" class="closeBtn px-0"><i class="icon ion-md-create px-0"></i></button>
+                <button data-modal-target="#popupEditAbout"  type="button" class="closeBtn px-0"><i class="icon ion-md-create px-0"></i></button>
               </div>
             </div>
           </div>
