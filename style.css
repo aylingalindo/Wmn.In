@@ -290,6 +290,7 @@ h2 {
     color: var(--hover);
 }
 
+/*-----------------*/
 #popupEditInfo {
     position:fixed;
     top:50%;
@@ -318,6 +319,44 @@ h2 {
     transform: translate(-50%, -50%)scale(1); 
 }
 
+#popupEditPost {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
+    transition: 200ms ease-in-out;
+    z-index: 10; /* su capa, para que se muestre sobre lo demás*/
+    width:45%;
+    height:50%;
+}
+#popupEditPost.active {
+    transform: translate(-50%, -50%)scale(1); 
+}
+
+#popupDeletePost {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)scale(0); /* escala 0 para que no se vea cuando no esta activo, se usa escala y opacidad para poder crear transiciones*/
+    transition: 200ms ease-in-out;
+    z-index: 10; /* su capa, para que se muestre sobre lo demás*/
+    width:45%;
+    height:50%;
+}
+#popupDeletePost.active {
+    transform: translate(-50%, -50%)scale(1); 
+}
+
+/* ------------------------- */
+
+#postTitle .form-control {
+    max-height: 15px;
+    overflow: hidden;
+}
+
+.postImg{
+    max-height: 200px;
+}
 
 /* ---------------------------------- INDEX PAGE ------------------------------------------------- */
 
